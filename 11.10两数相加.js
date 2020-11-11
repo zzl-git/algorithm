@@ -27,7 +27,9 @@ var addTwoNumbers = function(l1, l2) {
         let newNode = new listNode(sum%10);
         carry = sum>=10? 1: 0;
         cur.next = newNode;
-        cur =  newNode;
+        cur =  cur.next;
+        console.log(cur);
+        console.log(dummyHead);
         if(cur1){
             cur1 =cur1.next;
         }
@@ -61,14 +63,5 @@ const l2 = {
     }
 }
 console.log(addTwoNumbers(l1, l2));
-var  obj = {
-    val: 0,
-    next:  null,
-}
-let newNode = new listNode(1);
-for (let index = 0; index < 2; index++) {
-    obj.next = newNode;
-    obj =  obj.next;
-}
-console.log(obj);
+
 
